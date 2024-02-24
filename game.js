@@ -35,9 +35,24 @@ let draw = "Draw!"
 let lose = "You lose!"
 let win = "You win!"
 
-let playerSelection = "Paper"
-let compSelection = getComputerChoice()
-console.log(playRound(playerSelection, compSelection))
+function playGame() {
+    let playerScore = 0
+    let compScore = 0
 
-console.log("CPU's Choice: " + compSelection)
-console.log("Your Choice: " + playerSelection)
+    while(playerScore < 5 && compScore < 5) {
+        let playerSelection = prompt("Enter Rock, Paper or Scissors", '')
+        let compSelection = getComputerChoice()
+
+        console.log("CPU's Choice: " + compSelection)
+        console.log("Your Choice: " + playerSelection)
+        console.log(playRound(playerSelection, compSelection))
+
+        if (playRound(playerSelection, compSelection) == win) {
+            playerScore += 1;
+        } else if (playRound(playerSelection, compSelection) == lose) {
+            compScore += 1
+        }
+        console.log(playerScore)
+        console.log(compScore)
+    }
+}
