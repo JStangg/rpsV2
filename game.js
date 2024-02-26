@@ -56,4 +56,10 @@ function playGame() {
         console.log("Your score: " + playerScore)
         console.log("CPU score: " + compScore)
     }
+
+    if (playerScore === 5) {
+        console.log("You won the game!")
+    } else if (compScore === 5) {
+        console.log("Game over. You lost!")
+    }
 }
