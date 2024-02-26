@@ -43,8 +43,9 @@ function playGame() {
         let playerSelection = prompt("Enter Rock, Paper or Scissors", '')
         let compSelection = getComputerChoice()
 
-        console.log("CPU's Choice: " + compSelection)
+        console.log("------------------------")
         console.log("Your Choice: " + playerSelection)
+        console.log("CPU's Choice: " + compSelection)
         console.log(playRound(playerSelection, compSelection))
 
         if (playRound(playerSelection, compSelection) == win) {
@@ -52,7 +53,7 @@ function playGame() {
         } else if (playRound(playerSelection, compSelection) == lose) {
             compScore += 1
         }
-        console.log(playerScore)
-        console.log(compScore)
+        console.log("Your score: " + playerScore)
+        console.log("CPU score: " + compScore)
     }
 }
